@@ -7,7 +7,7 @@ import ConfusionMatrices from "./components/ConfusionMatrices";
 import HistoryTable from "./components/HistoryTable";
 import "./App.css";
 
-const API = "http://localhost:8000";
+const API = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 export default function App() {
     const [text, setText] = useState("");
