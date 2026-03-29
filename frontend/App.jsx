@@ -7,7 +7,7 @@ import ConfusionMatrices from "./components/ConfusionMatrices";
 import HistoryTable from "./components/HistoryTable";
 import "./App.css";
 
-const API = import.meta.env.VITE_API_URL || "https://roberta-vader-api.onrender.com";
+const API = import.meta.env.VITE_API_URL || "https://roberta-vs-vader-sentiment-app.onrender.com";
 
 export default function App() {
     const [text, setText] = useState("");
