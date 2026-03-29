@@ -1,5 +1,7 @@
 # Comparative Performance Dashboard: RoBERTa vs. VADER
 
+**🌍 Live Demo:** [https://ro-ber-ta-vs-vader-sentiment-app.vercel.app/](https://ro-ber-ta-vs-vader-sentiment-app.vercel.app/)
+
 A full-stack web application designed to compare the performance of a transformer-based model (RoBERTa) against a rule-based lexicon (VADER) for sentiment analysis tasks. 
 
 This dashboard provides a robust side-by-side comparison of inference results, confidence scores, and historical metrics.
