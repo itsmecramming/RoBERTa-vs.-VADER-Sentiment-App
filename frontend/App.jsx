@@ -28,7 +28,7 @@ export default function App() {
         setLoading(true);
         setError("");
         try {
-            const res = await fetch(`${API}/predict`, {
+            const res = await fetch(`${API}/analyze`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ text }),
