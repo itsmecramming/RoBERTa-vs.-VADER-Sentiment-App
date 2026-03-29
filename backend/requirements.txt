@@ -1,6 +1,6 @@
 fastapi==0.111.0
 uvicorn==0.29.0
-transformers==4.40.0
+transformers==4.35.2
 torch==2.11.0
 vaderSentiment==3.3.2
-numpy>=1.26,<2.0
+numpy<2.0,>=1.26
