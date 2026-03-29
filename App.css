@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* ── CSS Variables ── */
+:root {
+    --green-dark: #136207;
+    --green-mid: #1a7a09;
+    --green-light: #e8f5e3;
+    --bg-cream: #EDE6D6;
+    --bg-soft: #FFF6E3;
+    --white: #FFFDFD;
+    --gold: #D8B238;
+    --gold-deep: #CC9A02;
+    --gold-light: #FDF3D0;
+    --red: #C0392B;
+    --red-light: #FDECEA;
+    --gray: #6B7280;
+    --gray-light: #F3F4F6;
+    --text-dark: #1A1A1A;
+    --text-mid: #4A4A4A;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.10);
+    --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
+    --radius: 16px;
+    --radius-sm: 10px;
+    --transition: all 0.25s ease;
+}
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg-cream);
+    color: var(--text-dark);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* ── App Layout ── */
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+    width: 100%;
+}
+
+/* ── Hero ── */
+.hero-section {
+    text-align: center;
+    padding: 48px 0 32px;
+}
+
+.hero-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--green-dark);
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.hero-title .gold {
+    color: var(--gold-deep);
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    color: var(--gray);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+.thesis-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    letter-spacing: 0.06em;
+    line-height: 1.7;
+    margin-bottom: 10px;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ── Section Title ── */
+.section-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--green-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--gold), transparent);
+}
+
+/* ── Card ── */
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(216, 178, 56, 0.15);
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+/* ── Section spacing ── */
+section {
+    margin-bottom: 40px;
+}
+
+/* ── Footer ── */
+.footer {
+    background: var(--green-dark);
+    color: rgba(255, 255, 255, 0.85);
+    text-align: center;
+    padding: 24px;
+    font-size: 0.85rem;
+}
+
+.footer-sub {
+    color: var(--gold);
+    margin-top: 4px;
+    font-size: 0.8rem;
+}
+
+/* ── Spinner ── */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ── Badge ── */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.badge.positive {
+    background: var(--green-light);
+    color: var(--green-dark);
+}
+
+.badge.neutral {
+    background: var(--gray-light);
+    color: var(--gray);
+}
+
+.badge.negative {
+    background: var(--red-light);
+    color: var(--red);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-cream);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 3px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 16px 16px 48px;
+    }
+
+    .hero-section {
+        padding: 32px 0 24px;
+    }
+}

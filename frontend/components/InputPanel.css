@@ -1,0 +1,118 @@
+.input-card {
+    background: var(--bg-soft) !important;
+    border: 1px solid rgba(216, 178, 56, 0.25) !important;
+}
+
+.input-label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--green-dark);
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+}
+
+.input-textarea {
+    width: 100%;
+    border: 1.5px solid rgba(19, 98, 7, 0.2);
+    border-radius: var(--radius-sm);
+    padding: 14px 16px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    background: var(--white);
+    resize: vertical;
+    transition: var(--transition);
+    outline: none;
+    line-height: 1.7;
+}
+
+.input-textarea:focus {
+    border-color: var(--green-dark);
+    box-shadow: 0 0 0 3px rgba(19, 98, 7, 0.08);
+}
+
+.input-textarea::placeholder {
+    color: #AAAAAA;
+}
+
+.sample-label {
+    font-size: 0.8rem;
+    color: var(--gray);
+    margin: 14px 0 8px;
+    font-weight: 500;
+}
+
+.sample-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.sample-btn {
+    background: var(--white);
+    border: 1px solid var(--gold);
+    color: var(--gold-deep);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: 'DM Sans', sans-serif;
+}
+
+.sample-btn:hover {
+    background: var(--gold);
+    color: var(--white);
+}
+
+.error-msg {
+    background: var(--red-light);
+    color: var(--red);
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    border-left: 3px solid var(--red);
+}
+
+.input-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.char-count {
+    font-size: 0.78rem;
+    color: var(--gray);
+}
+
+.analyze-btn {
+    background: var(--green-dark);
+    color: var(--white);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 999px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 0.02em;
+}
+
+.analyze-btn:hover:not(:disabled) {
+    background: var(--green-mid);
+    box-shadow: 0 4px 16px rgba(19, 98, 7, 0.3);
+    transform: translateY(-1px);
+}
+
+.analyze-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

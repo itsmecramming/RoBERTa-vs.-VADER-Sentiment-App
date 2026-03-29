@@ -1,0 +1,90 @@
+.navbar {
+    background: var(--green-dark);
+    border-bottom: 3px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.navbar-logo {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.navbar-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.navbar-sub {
+    font-size: 0.72rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+}
+
+.navbar-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.model-tag {
+    background: rgba(216, 178, 56, 0.15);
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.model-tag.vader {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.vs {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .navbar-badge {
+        display: none;
+    }
+
+    .navbar-title {
+        font-size: 0.9rem;
+    }
+}
